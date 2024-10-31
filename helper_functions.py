@@ -891,20 +891,20 @@ def footprints_export_to_isxd(
         Footprint cellsets in ISXD format.
     """
 
-    # movie = isx.Movie.read(str(input_isxd))
-    # if isxd_path.selected is not None:
-    #     input_isxd = Path(isxd_path.selected)
-    # else:
-    input_isxd = Path(isxd_path)
+    
+    if isxd_path is not None:
+        input_isxd = Path(isxd_path)
+    else:
+        input_isxd = Path(image_path)
     output_path = Path.cwd() / f"{input_isxd.stem}{suffix}.isxd"
-
+    movie = isx.Movie.read(str(input_isxd))
     if output_path.exists():
         output_path.unlink()
 
     cell_set = isx.CellSet.write(
         str(output_path),
         timing=isx.Timing(num_samples=1),
-        spacing=isx.Spacing(num_pixels=(footprints.shape[0], footprints.shape[1])),
+        spacing=movie.spacing
     )
 
     for i in range(footprints.shape[2]):

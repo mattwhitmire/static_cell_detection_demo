@@ -7,4 +7,4 @@ Xvfb :99 -screen 0 1280x720x24 &
 export DISPLAY=:99
 
 # Start JupyterLab
-jupyter lab --ip 0.0.0.0 --no-browser --allow-root
+jupyter --ip 0.0.0.0 --no-browser --allow-root

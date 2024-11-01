@@ -12,14 +12,9 @@ from ipywidgets import interactive, widgets, Output, Layout
 from IPython.display import clear_output, display
 from typing import Any, Optional
 import matplotlib.colors as mcolors
-import pandas as pd
-import concurrent.futures
 from typing import Dict
 from pathlib import Path
 import json
-
-# Constants
-ZERO_VALUE = 0
 
 def read_image(path: str) -> np.ndarray:
     """
@@ -31,6 +26,11 @@ def read_image(path: str) -> np.ndarray:
     Returns:
         The image data.
     """
+    # Check if the file is in ISXD format
+    if not path.endswith('.isxd'):
+        raise ValueError("The specified file is not in ISXD format.")
+
+    # Proceed with reading the image if the format is correct
     return isx.Image.read(path).get_data()
 
 
@@ -406,7 +406,7 @@ def convolve_with_slider(
     widgets.VBox: A VBox widget containing the interactive slider and the output image.
     """
 
-    cell_diameter = 12
+    cell_diameter = 7
     n = 2  # default 2
     kernel_size = cell_diameter * n
     img_LoG = LoG_convolve(img_demean, kernel_size=kernel_size)
@@ -479,13 +479,6 @@ def show_img(
             plt.title("no footprints detected")
         else:
             plt.title(title)
-    # if title is not None:
-    #     plt.title(
-    #         f"no footprints detected"
-    #         if footprints is not None or not np.any(footprints)
-    #         else title
-    # )
-
     plt.xticks([])
     plt.yticks([])
     plt.show()
@@ -877,7 +870,7 @@ def merge_cells(
 
 
 def footprints_export_to_isxd(
-    image_path, isxd_path, footprints: np.ndarray, suffix: str
+    image_path, footprints: np.ndarray, suffix: str
 ) -> str:
     """
     Exports footprints to an ISXD file.
@@ -890,12 +883,8 @@ def footprints_export_to_isxd(
     Returns:
         Footprint cellsets in ISXD format.
     """
-
     
-    if isxd_path is not None:
-        input_isxd = Path(isxd_path)
-    else:
-        input_isxd = Path(image_path)
+    input_isxd = Path(image_path)
     output_path = Path.cwd() / f"{input_isxd.stem}{suffix}.isxd"
     movie = isx.Movie.read(str(input_isxd))
     if output_path.exists():

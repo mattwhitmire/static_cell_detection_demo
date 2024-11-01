@@ -1,4 +1,4 @@
-## How to Fork a Repository, Set Up a Codespace, and Launch the App for Abstract Processing
+## How to Fork a Repository, Set Up a Codespace, and Launch the App for Jupyter notebook testing
 
 
 ### Step 1: Fork the Repository

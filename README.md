@@ -28,9 +28,9 @@
 
 ### Step 3: Launch the app
 
-   - Once the Codespace is ready, start the app by running `sh start.sh` in the terminal, then click on the link displayed in the terminal.
+   - Once the Codespace is ready, start the app by running `sh start.sh` in the terminal, then click on the link displayed in the terminal and load the jupyter notebook page.
 ![image](https://github.com/user-attachments/assets/1459ae8b-897f-4f26-b2ec-99d6c8fe8581)
-
+![alt text](image.png)
 
 ## To pull the most recent updates from the source repository into your fork on GitHub, follow these steps:
 

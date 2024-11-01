@@ -4,7 +4,7 @@
 ### Step 1: Fork the Repository
 
 1. **Go to the Original Repository:**
-   - Visit the GitHub page of the repository you want to fork ([this page](https://github.com/qliu-Inscopix/static_cell_detection/edit/main/README.md)).
+   - Visit the GitHub page of the repository you want to fork.
 
 2. **Fork the Repository:**
    - In the top-right corner of the repository page, click the "Fork" button.

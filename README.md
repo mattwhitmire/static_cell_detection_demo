@@ -19,7 +19,7 @@
 2. **Create a New Codespace:**
    - Click on the "Code" button on your repository page.
    - Select the "Codespaces" tab.
-   - Click "Create codespace on main" (or the branch you want to work on).
+   - Click on the plus sign/"Create codespace on main"
    - ![image](https://github.com/user-attachments/assets/3e4b2988-52b4-4ce0-99c9-b119556ae6ea)
 
 3. **Wait for the Codespace to Launch:**

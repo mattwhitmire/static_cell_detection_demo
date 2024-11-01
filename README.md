@@ -25,7 +25,9 @@
 3. **Wait for the Codespace to Launch:**
    - GitHub will automatically set up your Codespace with the configuration specified in the repository's `.devcontainer.json` file.
    - This may take a few minutes.
-4. **Launch the app:**
+   
+### Step 3 Launch the app
+
    - Once the Codespace is ready, start the app by running `sh start.sh` in the terminal, then click on the link displayed in the terminal.
 ![image](https://github.com/user-attachments/assets/1459ae8b-897f-4f26-b2ec-99d6c8fe8581)
 

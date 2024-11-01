@@ -28,3 +28,31 @@
 4. **Launch the app:**
    - Once the Codespace is ready, start the app by running `sh start.sh` in the terminal, then click on the link displayed in the terminal.
    - If prompted for a token to log in to Jupyter Notebook, locate the token value (for example, 2e203bf9c9a07f167a73cd33eab0d5b8850153c74a0ba03d) in the terminal window, such as in http://127.0.0.1:8888/lab?token=2e203bf9c9a07f167a73cd33eab0d5b8850153c74a0ba03d.
+
+## To pull the most recent updates from the source repository into your fork on GitHub, follow these steps:
+
+1. **Navigate to Your Fork**: Go to the GitHub page of your forked repository.
+
+2. **Open the Fetch Upstream Option**:
+
+   - If GitHub detects that the upstream (original) repository has new commits that are not in your fork, you'll often see a “Fetch upstream” button on your fork’s main page.
+   - Click **Fetch upstream** and then click **Fetch and merge** to pull in the updates.
+
+3. **Manually Create a Pull Request (if "Fetch upstream" is not visible)**:
+
+   - Go to the **Pull requests** tab in your forked repository, and click **New pull request**.
+   - Select the upstream repository as the **base repository** (usually the original repository) and your fork as the **head repository**.
+   - Choose the appropriate branch (typically `main` or `master`) for both base and head.
+   - GitHub will display the changes between the repositories. If everything looks good, click **Create pull request**.
+   - Once the pull request is created, merge it to bring the latest changes into your fork.
+
+4. **Pull the Updates Locally (optional)**:
+
+   - If you also have a local clone of your fork, open your Git client or terminal, navigate to your local repository, and pull the latest changes:
+
+     ```
+     bash
+     git pull origin main
+     ```
+
+   - This step ensures that your local copy is in sync with the updated fork on GitHub.

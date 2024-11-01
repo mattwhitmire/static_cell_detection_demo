@@ -356,7 +356,7 @@ def threshold_with_sliders(img_demean: Any, cell_diameter: int) -> widgets.VBox:
     out = widgets.Output()
     LoG_footprints = []
     n_std = 0.3
-    image_threshold = 0.1
+    image_threshold = 0.03
 
     n_std_slider = widgets.FloatSlider(
         value=n_std, min=0, max=3, step=0.05, description="n_std:"

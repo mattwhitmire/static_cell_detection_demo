@@ -27,7 +27,8 @@
    - This may take a few minutes.
 4. **Launch the app:**
    - Once the Codespace is ready, start the app by running `sh start.sh` in the terminal, then click on the link displayed in the terminal.
-   - If prompted for a token to log in to Jupyter Notebook, locate the token value (for example, 2e203bf9c9a07f167a73cd33eab0d5b8850153c74a0ba03d) in the terminal window, such as in http://127.0.0.1:8888/lab?token=2e203bf9c9a07f167a73cd33eab0d5b8850153c74a0ba03d.
+![image](https://github.com/user-attachments/assets/1459ae8b-897f-4f26-b2ec-99d6c8fe8581)
+
 
 ## To pull the most recent updates from the source repository into your fork on GitHub, follow these steps:
 
